@@ -1,0 +1,75 @@
+﻿<Page x:Class="GateCount.Help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GateCount"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Help">
+    
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.BlueGrey.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        </Page.Resources>
+
+    <Grid Background="{DynamicResource MaterialDesignPaper}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Hello!" HorizontalAlignment="Left" FontSize="30" Grid.Row="0" Grid.ColumnSpan="2" Margin="2,20"
+           Foreground="{DynamicResource MaterialDesignBody}"
+           FontFamily="{DynamicResource MaterialDesignFont}"
+           FontWeight="Bold"/>
+
+        <TextBlock
+           HorizontalAlignment="Stretch" 
+           FontSize="20" 
+           Grid.Row="2" 
+           Grid.ColumnSpan="2" 
+           Margin="2"
+           Foreground="{DynamicResource MaterialDesignBody}"
+           FontFamily="{DynamicResource MaterialDesignFont}"
+           FontWeight="Bold" 
+           TextWrapping="Wrap">
+        
+         
+            This is just a simple tool I created to grab the number of patrons who walk through the security terminals. Sometimes the terminals respond very fast and sometimes they can be finnicky, so if the gate does not respond for some time it will output -1. Just try again and it should work. It is important to note that you must be on the same network as the terminals for this tool to work.
+            <Hyperlink NavigateUri="https://github.com/ColeTackett/Circulation-Gate-Counts" RequestNavigate="Hyperlink_RequestNavigate"/>
+        </TextBlock>
+
+        <TextBlock
+            HorizontalAlignment="Stretch" 
+            FontSize="20" 
+            Grid.Row="3" 
+            Grid.ColumnSpan="2" 
+            Margin="2,10"
+            Foreground="{DynamicResource MaterialDesignBody}"
+            FontFamily="{DynamicResource MaterialDesignFont}"
+            FontWeight="Bold" 
+            IsHitTestVisible="True"
+            TextWrapping="Wrap">
+            Source? 
+            <Hyperlink NavigateUri="https://github.com/ColeTackett/Circulation-Gate-Counts" RequestNavigate="Hyperlink_RequestNavigate">
+                Click me!</Hyperlink> If there is any questions/problems email tacket17@msu.edu
+            
+        </TextBlock>
+    </Grid>
+    
+    
+</Page>
