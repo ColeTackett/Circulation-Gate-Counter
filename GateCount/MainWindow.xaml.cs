@@ -24,5 +24,32 @@ namespace GateCount
         {
             InitializeComponent();
         }
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal; // Restore the window if it's maximized
+            }
+            else
+            {
+                WindowState = WindowState.Maximized; // Maximize the window if it's not maximized
+            }
+        }
     }
 }
