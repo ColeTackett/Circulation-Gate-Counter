@@ -65,7 +65,7 @@
             IsHitTestVisible="True"
             TextWrapping="Wrap">
             Source? 
-            <Hyperlink NavigateUri="https://github.com/ColeTackett/Circulation-Gate-Counts" RequestNavigate="Hyperlink_RequestNavigate">
+            <Hyperlink NavigateUri="https://github.com/ColeTackett/Circulation-Gate-Counter" RequestNavigate="Hyperlink_RequestNavigate">
                 Click me!</Hyperlink> If there is any questions/problems email tacket17@msu.edu
             
         </TextBlock>
